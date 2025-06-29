@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  openapi-typescript-codegen:
+    hash: 34cead8110e9248ad00a45547c1c0e2dfbfc6b7c5e5c4ed6764d1205fa7d8ecd
+    path: patches/openapi-typescript-codegen.patch
+
 importers:
 
   .:
     devDependencies:
       openapi-typescript-codegen:
         specifier: ^0.29.0
-        version: 0.29.0
+        version: 0.29.0(patch_hash=34cead8110e9248ad00a45547c1c0e2dfbfc6b7c5e5c4ed6764d1205fa7d8ecd)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -1472,7 +1477,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  openapi-typescript-codegen@0.29.0:
+  openapi-typescript-codegen@0.29.0(patch_hash=34cead8110e9248ad00a45547c1c0e2dfbfc6b7c5e5c4ed6764d1205fa7d8ecd):
     dependencies:
       '@apidevtools/json-schema-ref-parser': 11.9.3
       camelcase: 6.3.0

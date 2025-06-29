@@ -36,14 +36,12 @@ export class Service {
      * 增加地区
      * 增加地区
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAddArea(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 地区名
@@ -69,9 +67,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -81,14 +76,12 @@ export class Service {
      * 删除地区
      * @param adminPath
      * @param id 删除地区的id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteArea(
         adminPath: string,
         id: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
@@ -97,23 +90,18 @@ export class Service {
                 'adminPath': adminPath,
                 'id': id,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 修改地区
      * 修改地区
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateArea(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             /**
@@ -136,9 +124,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -149,7 +134,6 @@ export class Service {
      * @param adminPath
      * @param page
      * @param limit
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -157,7 +141,6 @@ export class Service {
         adminPath: string,
         page?: number,
         limit?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -185,9 +168,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'limit': limit,
@@ -199,14 +179,12 @@ export class Service {
      * 查询指定id的地区
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetArea(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -223,9 +201,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'id': id,
             },
@@ -235,14 +210,12 @@ export class Service {
      * 添加某节点到指定地区
      * 添加某节点到指定地区
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putAddNodeToArea(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 节点id
@@ -264,9 +237,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -278,7 +248,6 @@ export class Service {
      * @param area 地区分类ID
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -287,7 +256,6 @@ export class Service {
         area: number,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -328,9 +296,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'area': area,
                 'page': page,
@@ -345,7 +310,6 @@ export class Service {
      * @param parent 父级ID
      * @param page 页码
      * @param size 页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -354,16 +318,12 @@ export class Service {
         parent?: number,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getAreaListByParent',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'parent': parent,
@@ -378,7 +338,6 @@ export class Service {
      * @param adminPath
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -386,16 +345,12 @@ export class Service {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getAreaListByParentIsNull',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,
@@ -408,14 +363,12 @@ export class Service {
      * 获取节点网卡信息
      * @param adminPath
      * @param nodeId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetPveNodeNetworkInfo(
         adminPath: string,
         nodeId?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -444,9 +397,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'nodeId': nodeId,
             },
@@ -457,14 +407,12 @@ export class Service {
      * 获取节点网卡配置文件信息
      * @param adminPath
      * @param nodeId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetPveNodeInterfaces(
         adminPath: string,
         nodeId?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -476,9 +424,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'nodeId': nodeId,
             },
@@ -489,7 +434,6 @@ export class Service {
      * 创建指定节点虚拟网卡
      * @param adminPath
      * @param nodeId 节点id
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
@@ -497,7 +441,6 @@ export class Service {
     public static postCreatePveNodeInterface(
         adminPath: string,
         nodeId: number,
-        authorization?: string,
         requestBody?: {
             /**
              * 网卡名称
@@ -547,9 +490,6 @@ export class Service {
                 'adminPath': adminPath,
                 'nodeId': nodeId,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -559,14 +499,12 @@ export class Service {
      * 查询单个节点状态
      * @param adminPath
      * @param nodeId 节点ID
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetNodeInfoByOne(
         adminPath: string,
         nodeId: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -615,9 +553,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'nodeId': nodeId,
             },
@@ -630,7 +565,6 @@ export class Service {
      * @param nodeId 节点id
      * @param timeframe 采样时间 [hour, day, week, month, year] 默认为hour
      * @param cf 采样方式 [AVERAGE, MAX] 默认为AVERAGE
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -639,7 +573,6 @@ export class Service {
         nodeId: number,
         timeframe?: string,
         cf?: string,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -665,9 +598,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'nodeId': nodeId,
                 'timeframe': timeframe,
@@ -679,13 +609,11 @@ export class Service {
      * 获取节点总数
      * 获取节点总数
      * @param adminPath
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetNodeCount(
         adminPath: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
@@ -693,21 +621,16 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 添加PVE主控节点
      * 添加PVE主控集群节点
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAdminInsertNodeMaster(
-        authorization?: string,
         requestBody?: {
             /**
              * 名称
@@ -770,9 +693,6 @@ export class Service {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/admin/insertNodeMaster',
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -783,7 +703,6 @@ export class Service {
      * @param adminPath
      * @param page 页码
      * @param size 每页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -791,7 +710,6 @@ export class Service {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -830,9 +748,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -843,14 +758,12 @@ export class Service {
      * 修改集群节点信息
      * 修改集群节点信息
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateNodeInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             host: string;
@@ -871,9 +784,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -883,23 +793,18 @@ export class Service {
      * 删除指定ID节点
      * @param adminPath
      * @param nodeId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteNodeById(
         adminPath: string,
         nodeId?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
             url: '/{adminPath}/deleteNodeById',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'nodeId': nodeId,
@@ -910,14 +815,12 @@ export class Service {
      * 添加超管账号
      * 添加超管账号
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postRegisterDo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             phone: string;
             password: string;
@@ -936,9 +839,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -949,7 +849,6 @@ export class Service {
      * @param adminPath 后台路径
      * @param page 页码
      * @param size 页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -957,7 +856,6 @@ export class Service {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -988,9 +886,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -1001,14 +896,12 @@ export class Service {
      * 修改超管账号接口
      * 修改超管账号接口
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postUpdateSysuser(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             username: string;
@@ -1030,9 +923,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -1042,23 +932,18 @@ export class Service {
      * 根据uuid查询超管
      * @param adminPath
      * @param uuid
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetSysuserByUuid(
         adminPath: string,
         uuid?: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getSysuserByUuid',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'uuid': uuid,
@@ -1070,14 +955,12 @@ export class Service {
      * 删除超管账号
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteSysUserById(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
@@ -1086,23 +969,18 @@ export class Service {
                 'adminPath': adminPath,
                 'id': id,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 增加配置模板
      * 增加配置模板
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAddConfiguretemplate(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 配置模板ID
@@ -1232,9 +1110,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -1244,14 +1119,12 @@ export class Service {
      * 删除配置模板
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteConfiguretemplate(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
@@ -1260,23 +1133,18 @@ export class Service {
                 'adminPath': adminPath,
                 'id': id,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 修改配置模板
      * 修改配置模板
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateConfiguretemplate(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 配置模板ID
@@ -1406,9 +1274,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -1419,7 +1284,6 @@ export class Service {
      * @param adminPath
      * @param page 页码
      * @param limit 页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -1427,16 +1291,12 @@ export class Service {
         adminPath: string,
         page?: number,
         limit?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getConfiguretemplateByPage',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,
@@ -1450,7 +1310,6 @@ export class Service {
      * @param adminPath
      * @param hostId 数据库中虚拟机ID（非vmid）
      * @param action action类型有start、stop、reboot、shutdown
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
@@ -1459,7 +1318,6 @@ export class Service {
         adminPath: string,
         hostId: number,
         action: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 暂停原因
@@ -1475,9 +1333,6 @@ export class Service {
                 'hostId': hostId,
                 'action': action,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -1485,14 +1340,12 @@ export class Service {
     /**
      * 重装虚拟机系统
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putReinstall(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * hostId，非vmId
@@ -1518,9 +1371,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -1529,14 +1379,12 @@ export class Service {
      * 删除虚拟机
      * @param adminPath
      * @param hostId 非虚拟机vmId，为ID
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDelete(
         adminPath: string,
         hostId: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
@@ -1545,23 +1393,18 @@ export class Service {
                 'adminPath': adminPath,
                 'hostId': hostId,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 创建虚拟机
      * 创建虚拟机
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postCreateVm(
         adminPath: string,
-        authorization?: string,
         requestBody?: VmParams,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
@@ -1569,9 +1412,6 @@ export class Service {
             url: '/{adminPath}/createVm',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -1582,7 +1422,6 @@ export class Service {
      * @param adminPath
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -1590,7 +1429,6 @@ export class Service {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -1804,9 +1642,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -1820,7 +1655,6 @@ export class Service {
      * @param size
      * @param param
      * @param value
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -1830,16 +1664,12 @@ export class Service {
         size?: number,
         param?: string,
         value?: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getVmByParam',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,
@@ -1853,14 +1683,12 @@ export class Service {
      * 获取虚拟机主机信息
      * @param adminPath
      * @param hostId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetVmHostInfo(
         adminPath: string,
         hostId?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -2082,9 +1910,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'hostId': hostId,
             },
@@ -2096,7 +1921,6 @@ export class Service {
      * @param hostId 虚拟机id
      * @param timeframe 时间范围[hour,day,week,month,year]
      * @param cf 数据类型[AVERAGE,MAX]
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -2105,7 +1929,6 @@ export class Service {
         hostId?: number,
         timeframe?: string,
         cf?: string,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -2129,9 +1952,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'hostId': hostId,
                 'timeframe': timeframe,
@@ -2147,7 +1967,6 @@ export class Service {
      * @param hostId 可以为vmid
      * @param page 页数
      * @param size 页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -2157,7 +1976,6 @@ export class Service {
         hostId?: number,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -2178,9 +1996,6 @@ export class Service {
                 'adminPath': adminPath,
                 'node': node,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'hostId': hostId,
                 'page': page,
@@ -2194,7 +2009,6 @@ export class Service {
      * @param adminPath
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -2202,16 +2016,12 @@ export class Service {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getVmByPageOrderByCreateTime',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,
@@ -2226,7 +2036,6 @@ export class Service {
      * @param status 0为开机，详细查看电源管理接口
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -2235,16 +2044,12 @@ export class Service {
         status?: number,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getVmByStatus',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'status': status,
@@ -2258,23 +2063,18 @@ export class Service {
      * 获取指定状态的虚拟机总数
      * @param adminPath
      * @param status 0为开机，详细查看电源管理接口
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetVmCountByStatus(
         adminPath: string,
         status?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getVmCountByStatus',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'status': status,
@@ -2285,13 +2085,11 @@ export class Service {
      * 获取实例总数
      * 获取虚拟机总数
      * @param adminPath
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetVmCount(
         adminPath: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
@@ -2299,22 +2097,17 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 获取被控通讯密钥
      * 获取被控通讯密钥
      * @param adminPath
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetControlledSecretKey(
         adminPath: string,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -2326,22 +2119,17 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 获取全局虚拟机默认系统盘大小
      * 获取全局虚拟机默认系统盘大小
      * @param adminPath
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetVmDefaultDiskSize(
         adminPath: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
@@ -2349,23 +2137,18 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 修改全局虚拟机默认系统盘大小
      * 修改全局虚拟机默认系统盘大小，该接口支持POST,PUT请求方法
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postUpdateVmDefaultDiskSize(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 单位GB
@@ -2387,9 +2170,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2398,13 +2178,11 @@ export class Service {
      * 获取全部配置
      * 获取全部配置
      * @param adminPath
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetAllConfig(
         adminPath: string,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
@@ -2412,23 +2190,18 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
      * 修改系统配置
      * 修改系统配置
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateConfig(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             token: string;
@@ -2464,9 +2237,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2475,14 +2245,12 @@ export class Service {
      * 新增smbios信息模型
      * 新增smbios信息模型
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAddSmbiosInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             type?: string | null;
             model: any;
@@ -2498,9 +2266,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2509,14 +2274,12 @@ export class Service {
      * 删除smbios信息模型
      * 删除smbios信息模型
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteSmbiosInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
         },
@@ -2527,9 +2290,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2538,14 +2298,12 @@ export class Service {
      * 修改smbios信息模型
      * 修改smbios信息模型
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateSmbiosInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             type?: string | null;
@@ -2562,9 +2320,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2574,23 +2329,18 @@ export class Service {
      * 查询smbios信息模型
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetSmbiosInfo(
         adminPath: string,
         id?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getSmbiosInfo',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'id': id,
@@ -2603,7 +2353,6 @@ export class Service {
      * @param adminPath
      * @param page
      * @param limit
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -2611,16 +2360,12 @@ export class Service {
         adminPath: string,
         page?: number,
         limit?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getSmbiosInfoList',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,
@@ -2632,14 +2377,12 @@ export class Service {
      * 添加模型组
      * 添加模型组
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAddModelGroup(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * cpu模型id
@@ -2661,9 +2404,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2672,14 +2412,12 @@ export class Service {
      * 删除模型组
      * 删除模型组
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteModelGroup(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
         },
@@ -2690,9 +2428,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2701,14 +2436,12 @@ export class Service {
      * 修改模型组
      * 修改模型组
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateModelGroup(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             /**
@@ -2731,9 +2464,6 @@ export class Service {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -2743,23 +2473,18 @@ export class Service {
      * 查询模型组
      * @param adminPath
      * @param modelGroupId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getGetModelGroup(
         adminPath: string,
         modelGroupId?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getModelGroup',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'modelGroupId': modelGroupId,
@@ -2772,7 +2497,6 @@ export class Service {
      * @param adminPath
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -2780,16 +2504,12 @@ export class Service {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/getModelGroupPage',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,

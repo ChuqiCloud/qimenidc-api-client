@@ -9,13 +9,11 @@ export class NatService {
     /**
      * PVE主控创建NAT
      * 添加PVE主控集群节点
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAdminAddNodeMasterNat(
-        authorization?: string,
         requestBody?: {
             /**
              * 名称
@@ -78,9 +76,6 @@ export class NatService {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/admin/addNodeMasterNat',
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -88,14 +83,12 @@ export class NatService {
     /**
      * 添加虚拟机NAT规则
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postNatAdd(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             source_port: number;
             destination_ip: string;
@@ -316,9 +309,6 @@ export class NatService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -326,14 +316,12 @@ export class NatService {
     /**
      * 删除虚拟机NAT规则
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postNatDel(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             source_port: number;
             destination_ip: string;
@@ -554,9 +542,6 @@ export class NatService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -567,7 +552,6 @@ export class NatService {
      * @param page
      * @param size
      * @param hostId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -576,7 +560,6 @@ export class NatService {
         page?: number,
         size?: number,
         hostId?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -790,9 +773,6 @@ export class NatService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -804,14 +784,12 @@ export class NatService {
      * 获取虚拟机NAT相关信息
      * @param adminPath
      * @param hostId
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getNatGetInfo(
         adminPath: string,
         hostId?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -1024,9 +1002,6 @@ export class NatService {
             url: '/{adminPath}/nat/getInfo',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'hostId': hostId,

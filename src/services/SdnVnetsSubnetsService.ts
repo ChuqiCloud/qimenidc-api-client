@@ -10,14 +10,12 @@ export class SdnVnetsSubnetsService {
      * 添加子网
      * 添加子网
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postSdnAddSubnet(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * IP起始地址
@@ -52,9 +50,6 @@ export class SdnVnetsSubnetsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -66,7 +61,6 @@ export class SdnVnetsSubnetsService {
      * @param vnet vnet 名
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -75,7 +69,6 @@ export class SdnVnetsSubnetsService {
         vnet: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -112,9 +105,6 @@ export class SdnVnetsSubnetsService {
             path: {
                 'adminPath': adminPath,
                 'vnet': vnet,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,

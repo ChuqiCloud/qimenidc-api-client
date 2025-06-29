@@ -10,14 +10,12 @@ export class ApiService {
      * 添加API key
      * 新增api key，该appkey只会本次显示，后续查询将不显示
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postInsertApiKey(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 备注
@@ -41,9 +39,6 @@ export class ApiService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -54,7 +49,6 @@ export class ApiService {
      * @param adminPath 后台路径
      * @param page 页码
      * @param size 每页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -62,7 +56,6 @@ export class ApiService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -91,9 +84,6 @@ export class ApiService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -105,14 +95,12 @@ export class ApiService {
      * 删除指定ID的API key，可以post请求
      * @param adminPath 后台路径
      * @param id api id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteApi(
         adminPath: string,
         id?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -124,9 +112,6 @@ export class ApiService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'id': id,
             },
@@ -137,14 +122,12 @@ export class ApiService {
      * 停用指定API
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static putDisableApi(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'PUT',
@@ -153,9 +136,6 @@ export class ApiService {
                 'adminPath': adminPath,
                 'id': id,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
@@ -163,14 +143,12 @@ export class ApiService {
      * 启用指定API
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static putEnableApi(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'PUT',
@@ -178,9 +156,6 @@ export class ApiService {
             path: {
                 'adminPath': adminPath,
                 'id': id,
-            },
-            headers: {
-                'Authorization': authorization,
             },
         });
     }

@@ -10,14 +10,12 @@ export class SdnService {
      * 添加sdn区域
      * 添加sdn区域
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postSdnAddZone(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 节点id
@@ -47,9 +45,6 @@ export class SdnService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -59,14 +54,12 @@ export class SdnService {
      * 根据id删除sdn区域
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteSdnDeleteZoneById(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
@@ -75,9 +68,6 @@ export class SdnService {
                 'adminPath': adminPath,
                 'id': id,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
@@ -85,14 +75,12 @@ export class SdnService {
      * 根据标识zone删除sdn区域
      * @param adminPath
      * @param zone
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteSdnDeleteZoneByZone(
         adminPath: string,
         zone: string,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -105,9 +93,6 @@ export class SdnService {
                 'adminPath': adminPath,
                 'zone': zone,
             },
-            headers: {
-                'Authorization': authorization,
-            },
         });
     }
     /**
@@ -116,7 +101,6 @@ export class SdnService {
      * @param adminPath
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -124,7 +108,6 @@ export class SdnService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -146,9 +129,6 @@ export class SdnService {
             url: '/{adminPath}/sdn/getZonesByPage',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,

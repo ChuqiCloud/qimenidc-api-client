@@ -10,14 +10,12 @@ export class SdnVnetsService {
      * 添加vnet区域
      * 添加vnet区域
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postSdnAddVnet(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 名称
@@ -51,9 +49,6 @@ export class SdnVnetsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -64,7 +59,6 @@ export class SdnVnetsService {
      * @param adminPath
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -72,7 +66,6 @@ export class SdnVnetsService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -102,9 +95,6 @@ export class SdnVnetsService {
             url: '/{adminPath}/sdn/getVnetsByPage',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,

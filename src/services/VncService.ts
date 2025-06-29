@@ -10,14 +10,12 @@ export class VncService {
      * 增加vnc控制器节点
      * 增加vnc控制器节点
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAddVncNode(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             name: string;
@@ -48,9 +46,6 @@ export class VncService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -60,14 +55,12 @@ export class VncService {
      * 删除vnc控制器节点
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteVncNode(
         adminPath: string,
         id?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -79,9 +72,6 @@ export class VncService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'id': id,
             },
@@ -91,14 +81,12 @@ export class VncService {
      * 修改vnc控制器节点
      * 修改vnc控制器节点
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateVncNode(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             name: string;
@@ -125,9 +113,6 @@ export class VncService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -138,7 +123,6 @@ export class VncService {
      * @param adminPath
      * @param page 页码
      * @param size 页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -146,7 +130,6 @@ export class VncService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -176,9 +159,6 @@ export class VncService {
             url: '/{adminPath}/selectVncNodePage',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,

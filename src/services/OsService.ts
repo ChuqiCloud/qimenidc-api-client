@@ -12,7 +12,6 @@ export class OsService {
      * @param adminPath 后台路径
      * @param page
      * @param size
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -20,16 +19,12 @@ export class OsService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/selectOsByOnline',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,
@@ -41,14 +36,12 @@ export class OsService {
      * 激活在线OS
      * 激活在线OS到数据库
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postActiveOsByOnline(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 镜像文件全名
@@ -62,9 +55,6 @@ export class OsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -73,14 +63,12 @@ export class OsService {
      * 手动新增OS
      * 新增OS
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postInsertOs(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 系统名称（别称，可自定义）
@@ -130,9 +118,6 @@ export class OsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -143,7 +128,6 @@ export class OsService {
      * @param adminPath
      * @param page 页码
      * @param size 每页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -151,7 +135,6 @@ export class OsService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -189,9 +172,6 @@ export class OsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -206,7 +186,6 @@ export class OsService {
      * @param value 匹配值
      * @param page 页码
      * @param size 每页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -216,7 +195,6 @@ export class OsService {
         value: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -254,9 +232,6 @@ export class OsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -269,14 +244,12 @@ export class OsService {
      * 下载镜像
      * 下载指定id镜像到指定节点
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postDownloadOs(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 镜像id
@@ -294,9 +267,6 @@ export class OsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -305,14 +275,12 @@ export class OsService {
      * 删除os
      * 删除os
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteOs(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             osId: number;
         },
@@ -327,9 +295,6 @@ export class OsService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -338,14 +303,12 @@ export class OsService {
      * 修改os
      * 修改os
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateOs(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             /**
@@ -396,9 +359,6 @@ export class OsService {
             url: '/{adminPath}/updateOs',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             body: requestBody,
             mediaType: 'application/json',

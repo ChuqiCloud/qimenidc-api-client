@@ -10,14 +10,12 @@ export class CpuService {
      * 新增cpu信息模型
      * 新增cpu信息模型
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postAddCpuInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * cpu名称
@@ -63,9 +61,6 @@ export class CpuService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -74,14 +69,12 @@ export class CpuService {
      * 删除cpu信息模型
      * 删除cpu信息模型
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteCpuInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id?: number | null;
         },
@@ -92,9 +85,6 @@ export class CpuService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -103,14 +93,12 @@ export class CpuService {
      * 修改cpu信息模型
      * 修改cpu信息模型
      * @param adminPath
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateCpuInfo(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             /**
@@ -153,9 +141,6 @@ export class CpuService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -165,23 +150,18 @@ export class CpuService {
      * 查询cpu信息模型
      * @param adminPath
      * @param id
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static getSelectCpuInfo(
         adminPath: string,
         id: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/{adminPath}/selectCpuInfo',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'id': id,
@@ -194,7 +174,6 @@ export class CpuService {
      * @param adminPath
      * @param page
      * @param limit
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -202,7 +181,6 @@ export class CpuService {
         adminPath: string,
         page?: number,
         limit?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -237,9 +215,6 @@ export class CpuService {
             url: '/{adminPath}/selectCpuInfoPage',
             path: {
                 'adminPath': adminPath,
-            },
-            headers: {
-                'Authorization': authorization,
             },
             query: {
                 'page': page,

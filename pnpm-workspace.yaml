@@ -1,2 +1,4 @@
 onlyBuiltDependencies:
   - esbuild
+patchedDependencies:
+  openapi-typescript-codegen: patches/openapi-typescript-codegen.patch

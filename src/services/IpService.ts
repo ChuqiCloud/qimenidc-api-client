@@ -10,14 +10,12 @@ export class IpService {
      * 根据掩码位批量插入IP
      * 根据掩码位批量插入IP到IP池，并创建IP池
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postInsertIpPoolByMask(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * 池名
@@ -49,9 +47,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -60,14 +55,12 @@ export class IpService {
      * 根据IP范围批量插入IP
      * 根据IP范围批量插入IP到已创建的IP池
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static postInsertIpPoolByRange(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             /**
              * IP池ID
@@ -97,9 +90,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -110,7 +100,6 @@ export class IpService {
      * @param adminPath 后台路径
      * @param page 页码
      * @param size 页数据量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -118,7 +107,6 @@ export class IpService {
         adminPath: string,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -152,9 +140,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'page': page,
                 'size': size,
@@ -168,7 +153,6 @@ export class IpService {
      * @param poolid IP池ID
      * @param page 页码
      * @param size 页数量
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
@@ -177,7 +161,6 @@ export class IpService {
         poolid?: number,
         page?: number,
         size?: number,
-        authorization?: string,
     ): CancelablePromise<{
         code: number;
         message: string;
@@ -211,9 +194,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             query: {
                 'poolid': poolid,
                 'page': page,
@@ -225,14 +205,12 @@ export class IpService {
      * 更新IP池信息
      * 更新IP池信息，支持post请求
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateIpPool(
         adminPath: string,
-        authorization?: string,
         requestBody?: {
             id: number;
             name?: string | null;
@@ -252,9 +230,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -263,14 +238,12 @@ export class IpService {
      * 修改IP信息
      * 修改IP信息，可多个，支持post请求
      * @param adminPath 后台路径
-     * @param authorization
      * @param requestBody
      * @returns any
      * @throws ApiError
      */
     public static putUpdateIp(
         adminPath: string,
-        authorization?: string,
         requestBody?: Array<{
             id: number;
             nodeId?: number | null;
@@ -292,9 +265,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
             },
-            headers: {
-                'Authorization': authorization,
-            },
             body: requestBody,
             mediaType: 'application/json',
         });
@@ -304,14 +274,12 @@ export class IpService {
      * 删除指定IP池
      * @param adminPath
      * @param poolId ip池ID
-     * @param authorization
      * @returns any
      * @throws ApiError
      */
     public static deleteDeleteIpPool(
         adminPath: string,
         poolId: number,
-        authorization?: string,
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
@@ -319,9 +287,6 @@ export class IpService {
             path: {
                 'adminPath': adminPath,
                 'poolId': poolId,
-            },
-            headers: {
-                'Authorization': authorization,
             },
         });
     }
