@@ -92,7 +92,7 @@
     }
   ],
   "paths": {
-    "/{adminPath}/insertApiKey": {
+    "/insertApiKey": {
       "post": {
         "summary": "添加API key",
         "deprecated": false,
@@ -100,18 +100,7 @@
         "tags": [
           "后台/API管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -214,7 +203,7 @@
         ]
       }
     },
-    "/{adminPath}/selectApiByPage": {
+    "/selectApiByPage": {
       "get": {
         "summary": "分页获取API信息",
         "deprecated": false,
@@ -223,16 +212,6 @@
           "后台/API管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -388,7 +367,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteApi": {
+    "/deleteApi": {
       "delete": {
         "summary": "删除指定ID的API key",
         "deprecated": false,
@@ -397,16 +376,6 @@
           "后台/API管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "query",
@@ -459,7 +428,7 @@
         ]
       }
     },
-    "/{adminPath}/disableApi/{id}": {
+    "/disableApi/{id}": {
       "put": {
         "summary": "停用指定API",
         "deprecated": false,
@@ -468,16 +437,6 @@
           "后台/API管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -510,7 +469,7 @@
         ]
       }
     },
-    "/{adminPath}/enableApi/{id}": {
+    "/enableApi/{id}": {
       "put": {
         "summary": "启用指定API",
         "deprecated": false,
@@ -519,16 +478,6 @@
           "后台/API管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -561,7 +510,7 @@
         ]
       }
     },
-    "/{adminPath}/insertIpPoolByMask": {
+    "/insertIpPoolByMask": {
       "post": {
         "summary": "根据掩码位批量插入IP",
         "deprecated": false,
@@ -569,18 +518,7 @@
         "tags": [
           "后台/IP池管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -656,7 +594,7 @@
         ]
       }
     },
-    "/{adminPath}/insertIpPoolByRange": {
+    "/insertIpPoolByRange": {
       "post": {
         "summary": "根据IP范围批量插入IP",
         "deprecated": false,
@@ -664,18 +602,7 @@
         "tags": [
           "后台/IP池管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -742,7 +669,7 @@
         ]
       }
     },
-    "/{adminPath}/selectIpPoolList": {
+    "/selectIpPoolList": {
       "get": {
         "summary": "分页查询IP池列表",
         "deprecated": false,
@@ -751,16 +678,6 @@
           "后台/IP池管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -953,7 +870,7 @@
         ]
       }
     },
-    "/{adminPath}/selectIpListByPoolId": {
+    "/selectIpListByPoolId": {
       "get": {
         "summary": "查询指定IP池下的IP列表",
         "deprecated": false,
@@ -962,16 +879,6 @@
           "后台/IP池管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "poolid",
             "in": "query",
@@ -1318,7 +1225,7 @@
         ]
       }
     },
-    "/{adminPath}/updateIpPool": {
+    "/updateIpPool": {
       "put": {
         "summary": "更新IP池信息",
         "deprecated": false,
@@ -1326,18 +1233,7 @@
         "tags": [
           "后台/IP池管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1402,7 +1298,7 @@
         ]
       }
     },
-    "/{adminPath}/updateIp": {
+    "/updateIp": {
       "put": {
         "summary": "修改IP信息",
         "deprecated": false,
@@ -1410,18 +1306,7 @@
         "tags": [
           "后台/IP池管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1506,7 +1391,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteIpPool/{poolId}": {
+    "/deleteIpPool/{poolId}": {
       "delete": {
         "summary": "删除指定IP池",
         "deprecated": false,
@@ -1515,16 +1400,6 @@
           "后台/IP池管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "poolId",
             "in": "path",
@@ -1557,7 +1432,7 @@
         ]
       }
     },
-    "/{adminPath}/selectOsByOnline": {
+    "/selectOsByOnline": {
       "get": {
         "summary": "获取在线系统列表",
         "deprecated": false,
@@ -1566,16 +1441,6 @@
           "后台/OS管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -1652,7 +1517,7 @@
         ]
       }
     },
-    "/{adminPath}/activeOsByOnline": {
+    "/activeOsByOnline": {
       "post": {
         "summary": "激活在线OS",
         "deprecated": false,
@@ -1660,18 +1525,7 @@
         "tags": [
           "后台/OS管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1714,7 +1568,7 @@
         ]
       }
     },
-    "/{adminPath}/insertOs": {
+    "/insertOs": {
       "post": {
         "summary": "手动新增OS",
         "deprecated": false,
@@ -1722,18 +1576,7 @@
         "tags": [
           "后台/OS管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1844,7 +1687,7 @@
         ]
       }
     },
-    "/{adminPath}/selectOsByPage": {
+    "/selectOsByPage": {
       "get": {
         "summary": "分页获取已添加OS",
         "deprecated": false,
@@ -1853,16 +1696,6 @@
           "后台/OS管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -2047,7 +1880,7 @@
         ]
       }
     },
-    "/{adminPath}/selectOsByPageAndCondition": {
+    "/selectOsByPageAndCondition": {
       "get": {
         "summary": "分页带条件获取已添加os",
         "deprecated": false,
@@ -2056,16 +1889,6 @@
           "后台/OS管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -2270,7 +2093,7 @@
         ]
       }
     },
-    "/{adminPath}/downloadOs": {
+    "/downloadOs": {
       "post": {
         "summary": "下载镜像",
         "deprecated": false,
@@ -2278,18 +2101,7 @@
         "tags": [
           "后台/OS管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2338,7 +2150,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteOs": {
+    "/deleteOs": {
       "delete": {
         "summary": "删除os",
         "deprecated": false,
@@ -2346,18 +2158,7 @@
         "tags": [
           "后台/OS管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2419,7 +2220,7 @@
         ]
       }
     },
-    "/{adminPath}/updateOs": {
+    "/updateOs": {
       "put": {
         "summary": "修改os",
         "deprecated": false,
@@ -2427,18 +2228,7 @@
         "tags": [
           "后台/OS管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2532,7 +2322,7 @@
         ]
       }
     },
-    "/{adminPath}/loginDo": {
+    "/loginDo": {
       "post": {
         "summary": "登陆接口",
         "deprecated": false,
@@ -2540,18 +2330,7 @@
         "tags": [
           "后台/登录鉴权"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2599,7 +2378,7 @@
         "security": []
       }
     },
-    "/{adminPath}/addArea": {
+    "/addArea": {
       "post": {
         "summary": "增加地区",
         "deprecated": false,
@@ -2607,18 +2386,7 @@
         "tags": [
           "后台/地区管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2692,7 +2460,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteArea/{id}": {
+    "/deleteArea/{id}": {
       "delete": {
         "summary": "删除地区",
         "deprecated": false,
@@ -2701,16 +2469,6 @@
           "后台/地区管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -2743,7 +2501,7 @@
         ]
       }
     },
-    "/{adminPath}/updateArea": {
+    "/updateArea": {
       "put": {
         "summary": "修改地区",
         "deprecated": false,
@@ -2751,18 +2509,7 @@
         "tags": [
           "后台/地区管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2817,7 +2564,7 @@
         ]
       }
     },
-    "/{adminPath}/getAreaList": {
+    "/getAreaList": {
       "get": {
         "summary": "分页查询地区",
         "deprecated": false,
@@ -2826,16 +2573,6 @@
           "后台/地区管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -2980,7 +2717,7 @@
         ]
       }
     },
-    "/{adminPath}/getArea": {
+    "/getArea": {
       "get": {
         "summary": "查询指定id的地区",
         "deprecated": false,
@@ -2989,16 +2726,6 @@
           "后台/地区管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "query",
@@ -3076,7 +2803,7 @@
         ]
       }
     },
-    "/{adminPath}/addNodeToArea": {
+    "/addNodeToArea": {
       "put": {
         "summary": "添加某节点到指定地区",
         "deprecated": false,
@@ -3084,18 +2811,7 @@
         "tags": [
           "后台/地区管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -3161,7 +2877,7 @@
         ]
       }
     },
-    "/{adminPath}/getNodeListByArea": {
+    "/getNodeListByArea": {
       "get": {
         "summary": "获取指定地区的节点列表",
         "deprecated": false,
@@ -3170,16 +2886,6 @@
           "后台/地区管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "area",
             "in": "query",
@@ -3386,7 +3092,7 @@
         ]
       }
     },
-    "/{adminPath}/getAreaListByParent": {
+    "/getAreaListByParent": {
       "get": {
         "summary": "获取指定父级地区的子地区列表",
         "deprecated": false,
@@ -3395,16 +3101,6 @@
           "后台/地区管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "parent",
             "in": "query",
@@ -3457,7 +3153,7 @@
         ]
       }
     },
-    "/{adminPath}/getAreaListByParentIsNull": {
+    "/getAreaListByParentIsNull": {
       "get": {
         "summary": "分页查询父级（一级）地区",
         "deprecated": false,
@@ -3466,16 +3162,6 @@
           "后台/地区管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -3518,7 +3204,7 @@
         ]
       }
     },
-    "/{adminPath}/getPveNodeNetworkInfo": {
+    "/getPveNodeNetworkInfo": {
       "get": {
         "summary": "获取节点网卡信息",
         "deprecated": false,
@@ -3527,16 +3213,6 @@
           "后台/节点池管理/网卡管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "nodeId",
             "in": "query",
@@ -3686,7 +3362,7 @@
         ]
       }
     },
-    "/{adminPath}/getPveNodeInterfaces": {
+    "/getPveNodeInterfaces": {
       "get": {
         "summary": "获取节点网卡配置文件信息",
         "deprecated": false,
@@ -3695,16 +3371,6 @@
           "后台/节点池管理/网卡管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "nodeId",
             "in": "query",
@@ -3757,7 +3423,7 @@
         ]
       }
     },
-    "/{adminPath}/createPveNodeInterface/{nodeId}": {
+    "/createPveNodeInterface/{nodeId}": {
       "post": {
         "summary": "创建指定节点虚拟网卡",
         "deprecated": false,
@@ -3766,16 +3432,6 @@
           "后台/节点池管理/网卡管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "nodeId",
             "in": "path",
@@ -3936,7 +3592,7 @@
         ]
       }
     },
-    "/{adminPath}/getNodeInfoByOne": {
+    "/getNodeInfoByOne": {
       "get": {
         "summary": "查询单个节点状态",
         "deprecated": false,
@@ -3945,16 +3601,6 @@
           "后台/节点池管理/负载信息"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "nodeId",
             "in": "query",
@@ -4199,7 +3845,7 @@
         ]
       }
     },
-    "/{adminPath}/getNodeLoadAvg": {
+    "/getNodeLoadAvg": {
       "get": {
         "summary": "获取指定节点负载信息",
         "deprecated": false,
@@ -4208,16 +3854,6 @@
           "后台/节点池管理/负载信息"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "nodeId",
             "in": "query",
@@ -5400,7 +5036,7 @@
         ]
       }
     },
-    "/{adminPath}/getNodeCount": {
+    "/getNodeCount": {
       "get": {
         "summary": "获取节点总数",
         "deprecated": false,
@@ -5408,18 +5044,7 @@
         "tags": [
           "后台/节点池管理/负载信息"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -5441,7 +5066,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/addSubnet": {
+    "/sdn/addSubnet": {
       "post": {
         "summary": "添加子网",
         "deprecated": false,
@@ -5449,18 +5074,7 @@
         "tags": [
           "后台/节点池管理/SDN/vnets/subnets"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5552,7 +5166,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/{vnet}/getSubnets": {
+    "/sdn/{vnet}/getSubnets": {
       "get": {
         "summary": "根据vnet查询subnet列表",
         "deprecated": false,
@@ -5561,16 +5175,6 @@
           "后台/节点池管理/SDN/vnets/subnets"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "vnet",
             "in": "path",
@@ -5821,7 +5425,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/addVnet": {
+    "/sdn/addVnet": {
       "post": {
         "summary": "添加vnet区域",
         "deprecated": false,
@@ -5829,18 +5433,7 @@
         "tags": [
           "后台/节点池管理/SDN/vnets"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5924,7 +5517,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/getVnetsByPage": {
+    "/sdn/getVnetsByPage": {
       "get": {
         "summary": "查询vnet列表",
         "deprecated": false,
@@ -5933,16 +5526,6 @@
           "后台/节点池管理/SDN/vnets"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -6099,7 +5682,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/addZone": {
+    "/sdn/addZone": {
       "post": {
         "summary": "添加sdn区域",
         "deprecated": false,
@@ -6107,18 +5690,7 @@
         "tags": [
           "后台/节点池管理/SDN"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -6211,7 +5783,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/deleteZoneById/{id}": {
+    "/sdn/deleteZoneById/{id}": {
       "delete": {
         "summary": "根据id删除sdn区域",
         "deprecated": false,
@@ -6220,16 +5792,6 @@
           "后台/节点池管理/SDN"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -6262,7 +5824,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/deleteZoneByZone/{zone}": {
+    "/sdn/deleteZoneByZone/{zone}": {
       "delete": {
         "summary": "根据标识zone删除sdn区域",
         "deprecated": false,
@@ -6271,16 +5833,6 @@
           "后台/节点池管理/SDN"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "zone",
             "in": "path",
@@ -6346,7 +5898,7 @@
         ]
       }
     },
-    "/{adminPath}/sdn/getZonesByPage": {
+    "/sdn/getZonesByPage": {
       "get": {
         "summary": "查询sdn区域列表",
         "deprecated": false,
@@ -6355,16 +5907,6 @@
           "后台/节点池管理/SDN"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -6500,7 +6042,7 @@
         ]
       }
     },
-    "/admin/addNodeMasterNat": {
+    "/addNodeMasterNat": {
       "post": {
         "summary": "PVE主控创建NAT",
         "deprecated": false,
@@ -6633,7 +6175,7 @@
         ]
       }
     },
-    "/admin/insertNodeMaster": {
+    "/insertNodeMaster": {
       "post": {
         "summary": "添加PVE主控节点",
         "deprecated": false,
@@ -6771,7 +6313,7 @@
         ]
       }
     },
-    "/{adminPath}/selectNodeByPage": {
+    "/selectNodeByPage": {
       "get": {
         "summary": "分页获取集群节点列表",
         "deprecated": false,
@@ -6780,16 +6322,6 @@
           "后台/节点池管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -7047,7 +6579,7 @@
         ]
       }
     },
-    "/{adminPath}/updateNodeInfo": {
+    "/updateNodeInfo": {
       "put": {
         "summary": "修改集群节点信息",
         "deprecated": false,
@@ -7055,18 +6587,7 @@
         "tags": [
           "后台/节点池管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7158,7 +6679,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteNodeById": {
+    "/deleteNodeById": {
       "delete": {
         "summary": "删除指定ID节点",
         "deprecated": false,
@@ -7167,16 +6688,6 @@
           "后台/节点池管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "nodeId",
             "in": "query",
@@ -7209,7 +6720,7 @@
         ]
       }
     },
-    "/{adminPath}/registerDo": {
+    "/registerDo": {
       "post": {
         "summary": "添加超管账号",
         "deprecated": false,
@@ -7217,18 +6728,7 @@
         "tags": [
           "后台/超管账号管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7304,7 +6804,7 @@
         ]
       }
     },
-    "/{adminPath}/getSysuser": {
+    "/getSysuser": {
       "get": {
         "summary": "分页查询超管账号",
         "deprecated": false,
@@ -7313,16 +6813,6 @@
           "后台/超管账号管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "后台路径",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -7500,7 +6990,7 @@
         ]
       }
     },
-    "/{adminPath}/updateSysuser": {
+    "/updateSysuser": {
       "post": {
         "summary": "修改超管账号接口",
         "deprecated": false,
@@ -7508,18 +6998,7 @@
         "tags": [
           "后台/超管账号管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7589,7 +7068,7 @@
         ]
       }
     },
-    "/{adminPath}/getSysuserByUuid": {
+    "/getSysuserByUuid": {
       "get": {
         "summary": "根据uuid查询超管",
         "deprecated": false,
@@ -7598,16 +7077,6 @@
           "后台/超管账号管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "uuid",
             "in": "query",
@@ -7640,7 +7109,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteSysUserById/{id}": {
+    "/deleteSysUserById/{id}": {
       "delete": {
         "summary": "删除超管账号",
         "deprecated": false,
@@ -7649,16 +7118,6 @@
           "后台/超管账号管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admiin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -7691,7 +7150,7 @@
         ]
       }
     },
-    "/{adminPath}/addConfiguretemplate": {
+    "/addConfiguretemplate": {
       "post": {
         "summary": "增加配置模板",
         "deprecated": false,
@@ -7699,18 +7158,7 @@
         "tags": [
           "后台/实例管理/配置模板管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7920,7 +7368,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteConfiguretemplate/{id}": {
+    "/deleteConfiguretemplate/{id}": {
       "delete": {
         "summary": "删除配置模板",
         "deprecated": false,
@@ -7929,16 +7377,6 @@
           "后台/实例管理/配置模板管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -7970,7 +7408,7 @@
         ]
       }
     },
-    "/{adminPath}/updateConfiguretemplate": {
+    "/updateConfiguretemplate": {
       "put": {
         "summary": "修改配置模板",
         "deprecated": false,
@@ -7978,18 +7416,7 @@
         "tags": [
           "后台/实例管理/配置模板管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8187,7 +7614,7 @@
         ]
       }
     },
-    "/{adminPath}/getConfiguretemplateByPage": {
+    "/getConfiguretemplateByPage": {
       "get": {
         "summary": "分页查询配置模板",
         "deprecated": false,
@@ -8196,16 +7623,6 @@
           "后台/实例管理/配置模板管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -8248,21 +7665,21 @@
         ]
       }
     },
-    "/{adminPath}/nat/add": {
+    "/nat/add": {
       "post": {
-        "summary": "添加虚拟机NAT规则",
+        "summary": "添加端口转发规则",
         "deprecated": false,
-        "description": "",
+        "description": "添加端口转发规则",
         "tags": [
-          "后台/实例管理/实例操作/NAT"
+          "受控端"
         ],
         "parameters": [
           {
-            "name": "adminPath",
-            "in": "path",
+            "name": "Authorization",
+            "in": "header",
             "description": "",
-            "required": true,
-            "example": "admin",
+            "required": false,
+            "example": "83gec12d3ee99ssbb4328c53de7ca432a",
             "schema": {
               "type": "string"
             }
@@ -8275,35 +7692,44 @@
                 "type": "object",
                 "properties": {
                   "source_port": {
-                    "type": "integer"
+                    "type": "integer",
+                    "description": "宿主端口",
+                    "nullable": true
                   },
                   "destination_ip": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "客户端ip",
+                    "nullable": true
                   },
                   "destination_port": {
-                    "type": "integer"
+                    "type": "integer",
+                    "description": "客户端端口",
+                    "nullable": true
                   },
                   "protocol": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                      "tcp",
+                      "udp"
+                    ],
+                    "description": "tcp或udp"
                   },
                   "vm": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "虚拟机识别id"
                   }
                 },
                 "required": [
-                  "source_port",
-                  "destination_ip",
-                  "destination_port",
-                  "protocol",
                   "vm"
                 ]
               },
               "example": {
-                "source_port": 7780,
-                "destination_ip": "192.168.7.12",
-                "destination_port": 7780,
-                "protocol": "udp",
-                "vm": "10"
+                "source_ip": "110.42.32.185",
+                "source_port": 80,
+                "destination_ip": "10.0.1.6",
+                "destination_port": 80,
+                "protocol": "tcp",
+                "vm": "121"
               }
             }
           }
@@ -8315,1046 +7741,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "integer"
-                    },
-                    "message": {
-                      "type": "string"
-                    },
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "total": {
-                          "type": "integer"
-                        },
-                        "current": {
-                          "type": "integer"
-                        },
-                        "pages": {
-                          "type": "integer"
-                        },
-                        "size": {
-                          "type": "integer"
-                        },
-                        "records": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "vmhost": {
-                                "type": "object",
-                                "properties": {
-                                  "id": {
-                                    "type": "integer"
-                                  },
-                                  "nodeid": {
-                                    "type": "integer"
-                                  },
-                                  "vmid": {
-                                    "type": "integer"
-                                  },
-                                  "name": {
-                                    "type": "string"
-                                  },
-                                  "sockets": {
-                                    "type": "integer"
-                                  },
-                                  "cores": {
-                                    "type": "integer"
-                                  },
-                                  "threads": {
-                                    "type": "integer"
-                                  },
-                                  "devirtualization": {
-                                    "type": "boolean"
-                                  },
-                                  "kvm": {
-                                    "type": "boolean"
-                                  },
-                                  "cpuModel": {
-                                    "type": "null"
-                                  },
-                                  "modelGroup": {
-                                    "type": "null"
-                                  },
-                                  "cpu": {
-                                    "type": "string"
-                                  },
-                                  "cpuUnits": {
-                                    "type": "integer"
-                                  },
-                                  "args": {
-                                    "type": "null"
-                                  },
-                                  "arch": {
-                                    "type": "string"
-                                  },
-                                  "acpi": {
-                                    "type": "integer"
-                                  },
-                                  "memory": {
-                                    "type": "integer"
-                                  },
-                                  "swap": {
-                                    "type": "null"
-                                  },
-                                  "agent": {
-                                    "type": "integer"
-                                  },
-                                  "ide0": {
-                                    "type": "null"
-                                  },
-                                  "ide2": {
-                                    "type": "string"
-                                  },
-                                  "net0": {
-                                    "type": "string"
-                                  },
-                                  "net1": {
-                                    "type": "null"
-                                  },
-                                  "os": {
-                                    "type": "string"
-                                  },
-                                  "osType": {
-                                    "type": "string"
-                                  },
-                                  "iso": {
-                                    "type": "null"
-                                  },
-                                  "template": {
-                                    "type": "null"
-                                  },
-                                  "onBoot": {
-                                    "type": "integer"
-                                  },
-                                  "bandwidth": {
-                                    "type": "integer"
-                                  },
-                                  "storage": {
-                                    "type": "string"
-                                  },
-                                  "systemDiskSize": {
-                                    "type": "integer"
-                                  },
-                                  "dataDisk": {
-                                    "type": "object",
-                                    "properties": {
-                                      "1": {
-                                        "type": "integer"
-                                      }
-                                    },
-                                    "required": [
-                                      "1"
-                                    ]
-                                  },
-                                  "bridge": {
-                                    "type": "string"
-                                  },
-                                  "ipConfig": {
-                                    "type": "object",
-                                    "properties": {
-                                      "1": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "required": [
-                                      "1"
-                                    ]
-                                  },
-                                  "nested": {
-                                    "type": "integer"
-                                  },
-                                  "task": {
-                                    "type": "object",
-                                    "properties": {
-                                      "1692783654292": {
-                                        "type": "integer"
-                                      },
-                                      "1692783654310": {
-                                        "type": "integer"
-                                      },
-                                      "1692783693695": {
-                                        "type": "integer"
-                                      },
-                                      "1692783694983": {
-                                        "type": "integer"
-                                      },
-                                      "1692783695855": {
-                                        "type": "integer"
-                                      },
-                                      "1692783696541": {
-                                        "type": "integer"
-                                      }
-                                    },
-                                    "required": [
-                                      "1692783654292",
-                                      "1692783654310",
-                                      "1692783693695",
-                                      "1692783694983",
-                                      "1692783695855",
-                                      "1692783696541"
-                                    ]
-                                  },
-                                  "status": {
-                                    "type": "integer"
-                                  },
-                                  "createTime": {
-                                    "type": "integer"
-                                  },
-                                  "expirationTime": {
-                                    "type": "integer"
-                                  }
-                                },
-                                "required": [
-                                  "id",
-                                  "nodeid",
-                                  "vmid",
-                                  "name",
-                                  "sockets",
-                                  "cores",
-                                  "threads",
-                                  "devirtualization",
-                                  "kvm",
-                                  "cpuModel",
-                                  "modelGroup",
-                                  "cpu",
-                                  "cpuUnits",
-                                  "args",
-                                  "arch",
-                                  "acpi",
-                                  "memory",
-                                  "swap",
-                                  "agent",
-                                  "ide0",
-                                  "ide2",
-                                  "net0",
-                                  "net1",
-                                  "os",
-                                  "osType",
-                                  "iso",
-                                  "template",
-                                  "onBoot",
-                                  "bandwidth",
-                                  "storage",
-                                  "systemDiskSize",
-                                  "dataDisk",
-                                  "bridge",
-                                  "ipConfig",
-                                  "nested",
-                                  "task",
-                                  "status",
-                                  "createTime",
-                                  "expirationTime"
-                                ]
-                              },
-                              "current": {
-                                "type": "object",
-                                "properties": {
-                                  "data": {
-                                    "type": "object",
-                                    "properties": {
-                                      "running-qemu": {
-                                        "type": "string"
-                                      },
-                                      "name": {
-                                        "type": "string"
-                                      },
-                                      "mem": {
-                                        "type": "integer"
-                                      },
-                                      "disk": {
-                                        "type": "integer"
-                                      },
-                                      "pid": {
-                                        "type": "integer"
-                                      },
-                                      "status": {
-                                        "type": "string"
-                                      },
-                                      "diskread": {
-                                        "type": "integer"
-                                      },
-                                      "proxmox-support": {
-                                        "type": "object",
-                                        "properties": {
-                                          "pbs-dirty-bitmap-savevm": {
-                                            "type": "boolean"
-                                          },
-                                          "pbs-masterkey": {
-                                            "type": "boolean"
-                                          },
-                                          "query-bitmap-info": {
-                                            "type": "boolean"
-                                          },
-                                          "pbs-dirty-bitmap": {
-                                            "type": "boolean"
-                                          },
-                                          "pbs-dirty-bitmap-migration": {
-                                            "type": "boolean"
-                                          },
-                                          "pbs-library-version": {
-                                            "type": "string"
-                                          }
-                                        },
-                                        "required": [
-                                          "pbs-dirty-bitmap-savevm",
-                                          "pbs-masterkey",
-                                          "query-bitmap-info",
-                                          "pbs-dirty-bitmap",
-                                          "pbs-dirty-bitmap-migration",
-                                          "pbs-library-version"
-                                        ]
-                                      },
-                                      "agent": {
-                                        "type": "integer"
-                                      },
-                                      "nics": {
-                                        "type": "object",
-                                        "properties": {
-                                          "tap103i0": {
-                                            "type": "object",
-                                            "properties": {
-                                              "netout": {
-                                                "type": "integer"
-                                              },
-                                              "netin": {
-                                                "type": "integer"
-                                              }
-                                            },
-                                            "required": [
-                                              "netout",
-                                              "netin"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "tap103i0"
-                                        ]
-                                      },
-                                      "cpu": {
-                                        "type": "number"
-                                      },
-                                      "maxdisk": {
-                                        "type": "integer"
-                                      },
-                                      "freemem": {
-                                        "type": "integer"
-                                      },
-                                      "qmpstatus": {
-                                        "type": "string"
-                                      },
-                                      "diskwrite": {
-                                        "type": "integer"
-                                      },
-                                      "blockstat": {
-                                        "type": "object",
-                                        "properties": {
-                                          "scsi1": {
-                                            "type": "object",
-                                            "properties": {
-                                              "account_invalid": {
-                                                "type": "boolean"
-                                              },
-                                              "wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "rd_merged": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_merged": {
-                                                "type": "integer"
-                                              },
-                                              "rd_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "wr_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "timed_stats": {
-                                                "type": "array",
-                                                "items": {
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "failed_unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "failed_flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "idle_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "flush_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "failed_rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_highest_offset": {
-                                                "type": "integer"
-                                              },
-                                              "rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "account_failed": {
-                                                "type": "boolean"
-                                              },
-                                              "wr_merged": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "failed_wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "rd_bytes": {
-                                                "type": "integer"
-                                              }
-                                            },
-                                            "required": [
-                                              "account_invalid",
-                                              "wr_operations",
-                                              "rd_merged",
-                                              "unmap_total_time_ns",
-                                              "unmap_bytes",
-                                              "unmap_merged",
-                                              "rd_total_time_ns",
-                                              "wr_bytes",
-                                              "timed_stats",
-                                              "failed_unmap_operations",
-                                              "failed_flush_operations",
-                                              "idle_time_ns",
-                                              "invalid_wr_operations",
-                                              "unmap_operations",
-                                              "invalid_unmap_operations",
-                                              "flush_total_time_ns",
-                                              "failed_rd_operations",
-                                              "wr_highest_offset",
-                                              "rd_operations",
-                                              "account_failed",
-                                              "wr_merged",
-                                              "invalid_flush_operations",
-                                              "failed_wr_operations",
-                                              "flush_operations",
-                                              "invalid_rd_operations",
-                                              "wr_total_time_ns",
-                                              "rd_bytes"
-                                            ]
-                                          },
-                                          "ide2": {
-                                            "type": "object",
-                                            "properties": {
-                                              "unmap_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "rd_merged": {
-                                                "type": "integer"
-                                              },
-                                              "account_invalid": {
-                                                "type": "boolean"
-                                              },
-                                              "wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "failed_flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "failed_unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "idle_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "timed_stats": {
-                                                "type": "array",
-                                                "items": {
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "wr_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "rd_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_merged": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_merged": {
-                                                "type": "integer"
-                                              },
-                                              "account_failed": {
-                                                "type": "boolean"
-                                              },
-                                              "rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_highest_offset": {
-                                                "type": "integer"
-                                              },
-                                              "failed_rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "flush_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "rd_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "failed_wr_operations": {
-                                                "type": "integer"
-                                              }
-                                            },
-                                            "required": [
-                                              "unmap_bytes",
-                                              "unmap_total_time_ns",
-                                              "rd_merged",
-                                              "account_invalid",
-                                              "wr_operations",
-                                              "unmap_operations",
-                                              "invalid_wr_operations",
-                                              "failed_flush_operations",
-                                              "failed_unmap_operations",
-                                              "idle_time_ns",
-                                              "timed_stats",
-                                              "wr_bytes",
-                                              "rd_total_time_ns",
-                                              "unmap_merged",
-                                              "invalid_flush_operations",
-                                              "wr_merged",
-                                              "account_failed",
-                                              "rd_operations",
-                                              "wr_highest_offset",
-                                              "failed_rd_operations",
-                                              "flush_total_time_ns",
-                                              "invalid_unmap_operations",
-                                              "wr_total_time_ns",
-                                              "rd_bytes",
-                                              "invalid_rd_operations",
-                                              "flush_operations",
-                                              "failed_wr_operations"
-                                            ]
-                                          },
-                                          "scsi0": {
-                                            "type": "object",
-                                            "properties": {
-                                              "unmap_merged": {
-                                                "type": "integer"
-                                              },
-                                              "rd_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "wr_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "failed_unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "failed_flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "idle_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "timed_stats": {
-                                                "type": "array",
-                                                "items": {
-                                                  "type": "string"
-                                                }
-                                              },
-                                              "unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "account_invalid": {
-                                                "type": "boolean"
-                                              },
-                                              "wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "rd_merged": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "unmap_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "failed_wr_operations": {
-                                                "type": "integer"
-                                              },
-                                              "flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "rd_bytes": {
-                                                "type": "integer"
-                                              },
-                                              "flush_total_time_ns": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_unmap_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_highest_offset": {
-                                                "type": "integer"
-                                              },
-                                              "failed_rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "rd_operations": {
-                                                "type": "integer"
-                                              },
-                                              "invalid_flush_operations": {
-                                                "type": "integer"
-                                              },
-                                              "wr_merged": {
-                                                "type": "integer"
-                                              },
-                                              "account_failed": {
-                                                "type": "boolean"
-                                              }
-                                            },
-                                            "required": [
-                                              "unmap_merged",
-                                              "rd_total_time_ns",
-                                              "wr_bytes",
-                                              "failed_unmap_operations",
-                                              "failed_flush_operations",
-                                              "idle_time_ns",
-                                              "timed_stats",
-                                              "unmap_operations",
-                                              "invalid_wr_operations",
-                                              "account_invalid",
-                                              "wr_operations",
-                                              "rd_merged",
-                                              "unmap_total_time_ns",
-                                              "unmap_bytes",
-                                              "failed_wr_operations",
-                                              "flush_operations",
-                                              "invalid_rd_operations",
-                                              "wr_total_time_ns",
-                                              "rd_bytes",
-                                              "flush_total_time_ns",
-                                              "invalid_unmap_operations",
-                                              "wr_highest_offset",
-                                              "failed_rd_operations",
-                                              "rd_operations",
-                                              "invalid_flush_operations",
-                                              "wr_merged",
-                                              "account_failed"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "scsi1",
-                                          "ide2",
-                                          "scsi0"
-                                        ]
-                                      },
-                                      "ballooninfo": {
-                                        "type": "object",
-                                        "properties": {
-                                          "total_mem": {
-                                            "type": "integer"
-                                          },
-                                          "free_mem": {
-                                            "type": "integer"
-                                          },
-                                          "last_update": {
-                                            "type": "integer"
-                                          },
-                                          "major_page_faults": {
-                                            "type": "integer"
-                                          },
-                                          "minor_page_faults": {
-                                            "type": "integer"
-                                          },
-                                          "actual": {
-                                            "type": "integer"
-                                          },
-                                          "max_mem": {
-                                            "type": "integer"
-                                          },
-                                          "mem_swapped_out": {
-                                            "type": "integer"
-                                          },
-                                          "mem_swapped_in": {
-                                            "type": "integer"
-                                          }
-                                        },
-                                        "required": [
-                                          "total_mem",
-                                          "free_mem",
-                                          "last_update",
-                                          "major_page_faults",
-                                          "minor_page_faults",
-                                          "actual",
-                                          "max_mem",
-                                          "mem_swapped_out",
-                                          "mem_swapped_in"
-                                        ]
-                                      },
-                                      "uptime": {
-                                        "type": "integer"
-                                      },
-                                      "vmid": {
-                                        "type": "integer"
-                                      },
-                                      "netin": {
-                                        "type": "integer"
-                                      },
-                                      "cpus": {
-                                        "type": "integer"
-                                      },
-                                      "maxmem": {
-                                        "type": "integer"
-                                      },
-                                      "netout": {
-                                        "type": "integer"
-                                      },
-                                      "ha": {
-                                        "type": "object",
-                                        "properties": {
-                                          "managed": {
-                                            "type": "integer"
-                                          }
-                                        },
-                                        "required": [
-                                          "managed"
-                                        ]
-                                      },
-                                      "balloon": {
-                                        "type": "integer"
-                                      },
-                                      "running-machine": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "required": [
-                                      "running-qemu",
-                                      "name",
-                                      "mem",
-                                      "disk",
-                                      "pid",
-                                      "status",
-                                      "diskread",
-                                      "proxmox-support",
-                                      "agent",
-                                      "nics",
-                                      "cpu",
-                                      "maxdisk",
-                                      "freemem",
-                                      "qmpstatus",
-                                      "diskwrite",
-                                      "blockstat",
-                                      "ballooninfo",
-                                      "uptime",
-                                      "vmid",
-                                      "netin",
-                                      "cpus",
-                                      "maxmem",
-                                      "netout",
-                                      "ha",
-                                      "balloon",
-                                      "running-machine"
-                                    ]
-                                  }
-                                },
-                                "required": [
-                                  "data"
-                                ]
-                              },
-                              "rrddata": {
-                                "type": "null"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "required": [
-                        "total",
-                        "current",
-                        "pages",
-                        "size",
-                        "records"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "message",
-                    "data"
-                  ]
-                },
-                "example": {
-                  "code": 20000,
-                  "message": "请求成功",
-                  "data": {
-                    "total": 1,
-                    "current": 1,
-                    "pages": 1,
-                    "size": 20,
-                    "records": [
-                      {
-                        "vmhost": {
-                          "id": 25,
-                          "nodeid": 1,
-                          "vmid": 103,
-                          "name": "VM-01",
-                          "sockets": 1,
-                          "cores": 2,
-                          "threads": 2,
-                          "devirtualization": false,
-                          "kvm": true,
-                          "cpuModel": null,
-                          "modelGroup": null,
-                          "cpu": "host",
-                          "cpuUnits": 1024,
-                          "args": null,
-                          "arch": "x86_64",
-                          "acpi": 1,
-                          "memory": 1024,
-                          "swap": null,
-                          "agent": 1,
-                          "ide0": null,
-                          "ide2": "local-lvm:cloudinit",
-                          "net0": "virtio,bridge=vmbr0",
-                          "net1": null,
-                          "os": "CentOS-8-Stream-x64.qcow2",
-                          "osType": "linux",
-                          "iso": null,
-                          "template": null,
-                          "onBoot": 1,
-                          "bandwidth": 100,
-                          "storage": "local-lvm",
-                          "systemDiskSize": 40,
-                          "dataDisk": {
-                            "1": 40
-                          },
-                          "bridge": "vmbr0",
-                          "ipConfig": {
-                            "1": "ip=192.168.36.1/24,gw=192.168.36.2"
-                          },
-                          "nested": 0,
-                          "task": {
-                            "1692783654292": 135,
-                            "1692783654310": 136,
-                            "1692783693695": 137,
-                            "1692783694983": 138,
-                            "1692783695855": 139,
-                            "1692783696541": 140
-                          },
-                          "status": 0,
-                          "createTime": 1692783654293,
-                          "expirationTime": 2008143654293
-                        },
-                        "current": {
-                          "data": {
-                            "running-qemu": "6.1.0",
-                            "name": "VM-01",
-                            "mem": 553115648,
-                            "disk": 0,
-                            "pid": 41319,
-                            "status": "running",
-                            "diskread": 857323698,
-                            "proxmox-support": {
-                              "pbs-dirty-bitmap-savevm": true,
-                              "pbs-masterkey": true,
-                              "query-bitmap-info": true,
-                              "pbs-dirty-bitmap": true,
-                              "pbs-dirty-bitmap-migration": true,
-                              "pbs-library-version": "1.2.0 (6e555bc73a7dcfb4d0b47355b958afd101ad27b5)"
-                            },
-                            "agent": 1,
-                            "nics": {
-                              "tap103i0": {
-                                "netout": 2048408,
-                                "netin": 146164136
-                              }
-                            },
-                            "cpu": 0.0312977631257886,
-                            "maxdisk": 42949672960,
-                            "freemem": 254599168,
-                            "qmpstatus": "running",
-                            "diskwrite": 552444416,
-                            "blockstat": {
-                              "scsi1": {
-                                "account_invalid": true,
-                                "wr_operations": 0,
-                                "rd_merged": 0,
-                                "unmap_total_time_ns": 0,
-                                "unmap_bytes": 0,
-                                "unmap_merged": 0,
-                                "rd_total_time_ns": 119191813,
-                                "wr_bytes": 0,
-                                "timed_stats": [],
-                                "failed_unmap_operations": 0,
-                                "failed_flush_operations": 0,
-                                "idle_time_ns": 66957079181668,
-                                "invalid_wr_operations": 0,
-                                "unmap_operations": 0,
-                                "invalid_unmap_operations": 0,
-                                "flush_total_time_ns": 0,
-                                "failed_rd_operations": 0,
-                                "wr_highest_offset": 0,
-                                "rd_operations": 434,
-                                "account_failed": true,
-                                "wr_merged": 0,
-                                "invalid_flush_operations": 0,
-                                "failed_wr_operations": 0,
-                                "flush_operations": 0,
-                                "invalid_rd_operations": 0,
-                                "wr_total_time_ns": 0,
-                                "rd_bytes": 9629696
-                              },
-                              "ide2": {
-                                "unmap_bytes": 0,
-                                "unmap_total_time_ns": 0,
-                                "rd_merged": 0,
-                                "account_invalid": true,
-                                "wr_operations": 0,
-                                "unmap_operations": 0,
-                                "invalid_wr_operations": 0,
-                                "failed_flush_operations": 0,
-                                "failed_unmap_operations": 0,
-                                "idle_time_ns": 66956996453557,
-                                "timed_stats": [],
-                                "wr_bytes": 0,
-                                "rd_total_time_ns": 31770289,
-                                "unmap_merged": 0,
-                                "invalid_flush_operations": 0,
-                                "wr_merged": 0,
-                                "account_failed": true,
-                                "rd_operations": 80,
-                                "wr_highest_offset": 0,
-                                "failed_rd_operations": 0,
-                                "flush_total_time_ns": 0,
-                                "invalid_unmap_operations": 0,
-                                "wr_total_time_ns": 0,
-                                "rd_bytes": 278706,
-                                "invalid_rd_operations": 0,
-                                "flush_operations": 0,
-                                "failed_wr_operations": 0
-                              },
-                              "scsi0": {
-                                "unmap_merged": 0,
-                                "rd_total_time_ns": 23389570377,
-                                "wr_bytes": 552444416,
-                                "failed_unmap_operations": 0,
-                                "failed_flush_operations": 0,
-                                "idle_time_ns": 18807941480,
-                                "timed_stats": [],
-                                "unmap_operations": 0,
-                                "invalid_wr_operations": 0,
-                                "account_invalid": true,
-                                "wr_operations": 13321,
-                                "rd_merged": 0,
-                                "unmap_total_time_ns": 0,
-                                "unmap_bytes": 0,
-                                "failed_wr_operations": 0,
-                                "flush_operations": 4640,
-                                "invalid_rd_operations": 0,
-                                "wr_total_time_ns": 28158216376,
-                                "rd_bytes": 847415296,
-                                "flush_total_time_ns": 2741837421,
-                                "invalid_unmap_operations": 0,
-                                "wr_highest_offset": 42018529280,
-                                "failed_rd_operations": 0,
-                                "rd_operations": 23603,
-                                "invalid_flush_operations": 0,
-                                "wr_merged": 0,
-                                "account_failed": true
-                              }
-                            },
-                            "ballooninfo": {
-                              "total_mem": 807714816,
-                              "free_mem": 254599168,
-                              "last_update": 1693025679,
-                              "major_page_faults": 6841,
-                              "minor_page_faults": 14395839,
-                              "actual": 1073741824,
-                              "max_mem": 1073741824,
-                              "mem_swapped_out": 168591360,
-                              "mem_swapped_in": 44277760
-                            },
-                            "uptime": 66977,
-                            "vmid": 103,
-                            "netin": 146164136,
-                            "cpus": 2,
-                            "maxmem": 1073741824,
-                            "netout": 2048408,
-                            "ha": {
-                              "managed": 0
-                            },
-                            "balloon": 1073741824,
-                            "running-machine": "pc-i440fx-6.1+pve0"
-                          }
-                        },
-                        "rrddata": null
-                      }
-                    ]
-                  }
+                  "properties": {}
                 }
               }
             },
@@ -9368,7 +7755,7 @@
         ]
       }
     },
-    "/{adminPath}/nat/del": {
+    "/nat/del": {
       "post": {
         "summary": "删除虚拟机NAT规则",
         "deprecated": false,
@@ -9376,18 +7763,7 @@
         "tags": [
           "后台/实例管理/实例操作/NAT"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -10488,7 +8864,7 @@
         ]
       }
     },
-    "/{adminPath}/nat/getVm": {
+    "/nat/getVm": {
       "get": {
         "summary": "获取虚拟机NAT规则",
         "deprecated": false,
@@ -10497,16 +8873,6 @@
           "后台/实例管理/实例操作/NAT"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -11598,7 +9964,7 @@
         ]
       }
     },
-    "/{adminPath}/nat/getInfo": {
+    "/nat/getInfo": {
       "get": {
         "summary": "获取虚拟机NAT相关信息",
         "deprecated": false,
@@ -11607,16 +9973,6 @@
           "后台/实例管理/实例操作/NAT"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "hostId",
             "in": "query",
@@ -12688,7 +11044,7 @@
         ]
       }
     },
-    "/{adminPath}/power/{hostId}/{action}": {
+    "/power/{hostId}/{action}": {
       "put": {
         "summary": "电源状态操作",
         "deprecated": false,
@@ -12697,16 +11053,6 @@
           "后台/实例管理/实例操作"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "hostId",
             "in": "path",
@@ -12768,7 +11114,7 @@
         ]
       }
     },
-    "/{adminPath}/reinstall": {
+    "/reinstall": {
       "put": {
         "summary": "重装虚拟机系统",
         "deprecated": false,
@@ -12776,18 +11122,7 @@
         "tags": [
           "后台/实例管理/实例操作"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -12844,7 +11179,7 @@
         ]
       }
     },
-    "/{adminPath}/delete/{hostId}": {
+    "/delete/{hostId}": {
       "delete": {
         "summary": "删除虚拟机",
         "deprecated": false,
@@ -12853,16 +11188,6 @@
           "后台/实例管理/实例操作"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "hostId",
             "in": "path",
@@ -12895,7 +11220,7 @@
         ]
       }
     },
-    "/{adminPath}/createVm": {
+    "/createVm": {
       "post": {
         "summary": "创建虚拟机",
         "deprecated": false,
@@ -12903,18 +11228,7 @@
         "tags": [
           "后台/实例管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -12973,7 +11287,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmByPage": {
+    "/getVmByPage": {
       "get": {
         "summary": "分页获取实例信息",
         "deprecated": false,
@@ -12982,16 +11296,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -14073,7 +12377,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmByParam": {
+    "/getVmByParam": {
       "get": {
         "summary": "带参数分页获取实例信息",
         "deprecated": false,
@@ -14082,16 +12386,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -14154,7 +12448,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmHostInfo": {
+    "/getVmHostInfo": {
       "get": {
         "summary": "获取虚拟机主机信息",
         "deprecated": false,
@@ -14163,16 +12457,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "hostId",
             "in": "query",
@@ -16186,7 +14470,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmHostRrdData": {
+    "/getVmHostRrdData": {
       "get": {
         "summary": "获取虚拟机历史负载",
         "deprecated": false,
@@ -16195,16 +14479,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "hostId",
             "in": "query",
@@ -17229,7 +15503,7 @@
         ]
       }
     },
-    "/{adminPath}/{node}/getVnc": {
+    "/{node}/getVnc": {
       "get": {
         "summary": "获取指定虚拟机的vnc地址",
         "deprecated": false,
@@ -17238,16 +15512,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "node",
             "in": "path",
@@ -17372,7 +15636,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmByPageOrderByCreateTime": {
+    "/getVmByPageOrderByCreateTime": {
       "get": {
         "summary": "以降序排列获取虚拟机分页列表",
         "deprecated": false,
@@ -17381,16 +15645,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -17433,7 +15687,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmByStatus": {
+    "/getVmByStatus": {
       "get": {
         "summary": "分页获取指定状态的虚拟机列表",
         "deprecated": false,
@@ -17442,16 +15696,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "status",
             "in": "query",
@@ -17504,7 +15748,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmCountByStatus": {
+    "/getVmCountByStatus": {
       "get": {
         "summary": "获取指定状态的虚拟机总数",
         "deprecated": false,
@@ -17513,16 +15757,6 @@
           "后台/实例管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "status",
             "in": "query",
@@ -17555,7 +15789,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmCount": {
+    "/getVmCount": {
       "get": {
         "summary": "获取实例总数",
         "deprecated": false,
@@ -17563,18 +15797,7 @@
         "tags": [
           "后台/实例管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -17668,7 +15891,7 @@
         ]
       }
     },
-    "/{adminPath}/getControlledSecretKey": {
+    "/getControlledSecretKey": {
       "get": {
         "summary": "获取被控通讯密钥",
         "deprecated": false,
@@ -17676,18 +15899,7 @@
         "tags": [
           "后台/系统设置"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -17729,7 +15941,7 @@
         ]
       }
     },
-    "/{adminPath}/getVmDefaultDiskSize": {
+    "/getVmDefaultDiskSize": {
       "get": {
         "summary": "获取全局虚拟机默认系统盘大小",
         "deprecated": false,
@@ -17737,18 +15949,7 @@
         "tags": [
           "后台/系统设置"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -17778,7 +15979,7 @@
         ]
       }
     },
-    "/{adminPath}/updateVmDefaultDiskSize": {
+    "/updateVmDefaultDiskSize": {
       "post": {
         "summary": "修改全局虚拟机默认系统盘大小",
         "deprecated": false,
@@ -17786,18 +15987,7 @@
         "tags": [
           "后台/系统设置"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -17865,7 +16055,7 @@
         ]
       }
     },
-    "/{adminPath}/getAllConfig": {
+    "/getAllConfig": {
       "get": {
         "summary": "获取全部配置",
         "deprecated": false,
@@ -17873,18 +16063,7 @@
         "tags": [
           "后台/系统设置"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -17906,7 +16085,7 @@
         ]
       }
     },
-    "/{adminPath}/updateConfig": {
+    "/updateConfig": {
       "put": {
         "summary": "修改系统配置",
         "deprecated": false,
@@ -17914,18 +16093,7 @@
         "tags": [
           "后台/系统设置"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -17999,7 +16167,7 @@
         ]
       }
     },
-    "/{adminPath}/addCpuInfo": {
+    "/addCpuInfo": {
       "post": {
         "summary": "新增cpu信息模型",
         "deprecated": false,
@@ -18007,18 +16175,7 @@
         "tags": [
           "后台/限制功能/CPU模型管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -18121,7 +16278,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteCpuInfo": {
+    "/deleteCpuInfo": {
       "delete": {
         "summary": "删除cpu信息模型",
         "deprecated": false,
@@ -18129,18 +16286,7 @@
         "tags": [
           "后台/限制功能/CPU模型管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -18178,7 +16324,7 @@
         ]
       }
     },
-    "/{adminPath}/updateCpuInfo": {
+    "/updateCpuInfo": {
       "put": {
         "summary": "修改cpu信息模型",
         "deprecated": false,
@@ -18186,18 +16332,7 @@
         "tags": [
           "后台/限制功能/CPU模型管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -18277,7 +16412,7 @@
         ]
       }
     },
-    "/{adminPath}/selectCpuInfo": {
+    "/selectCpuInfo": {
       "get": {
         "summary": "查询cpu信息模型",
         "deprecated": false,
@@ -18286,16 +16421,6 @@
           "后台/限制功能/CPU模型管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "query",
@@ -18328,7 +16453,7 @@
         ]
       }
     },
-    "/{adminPath}/selectCpuInfoPage": {
+    "/selectCpuInfoPage": {
       "get": {
         "summary": "分页查询cpu信息模型",
         "deprecated": false,
@@ -18337,16 +16462,6 @@
           "后台/限制功能/CPU模型管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -18523,7 +16638,7 @@
         ]
       }
     },
-    "/{adminPath}/addSmbiosInfo": {
+    "/addSmbiosInfo": {
       "post": {
         "summary": "新增smbios信息模型",
         "deprecated": false,
@@ -18531,18 +16646,7 @@
         "tags": [
           "后台/限制功能/硬件模型管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -18605,7 +16709,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteSmbiosInfo": {
+    "/deleteSmbiosInfo": {
       "delete": {
         "summary": "删除smbios信息模型",
         "deprecated": false,
@@ -18613,18 +16717,7 @@
         "tags": [
           "后台/限制功能/硬件模型管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -18664,7 +16757,7 @@
         ]
       }
     },
-    "/{adminPath}/updateSmbiosInfo": {
+    "/updateSmbiosInfo": {
       "put": {
         "summary": "修改smbios信息模型",
         "deprecated": false,
@@ -18672,18 +16765,7 @@
         "tags": [
           "后台/限制功能/硬件模型管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -18737,7 +16819,7 @@
         ]
       }
     },
-    "/{adminPath}/getSmbiosInfo": {
+    "/getSmbiosInfo": {
       "get": {
         "summary": "查询smbios信息模型",
         "deprecated": false,
@@ -18746,16 +16828,6 @@
           "后台/限制功能/硬件模型管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "query",
@@ -18788,7 +16860,7 @@
         ]
       }
     },
-    "/{adminPath}/getSmbiosInfoList": {
+    "/getSmbiosInfoList": {
       "get": {
         "summary": "分页查询smbios信息模型",
         "deprecated": false,
@@ -18797,16 +16869,6 @@
           "后台/限制功能/硬件模型管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -18930,7 +16992,7 @@
         ]
       }
     },
-    "/{adminPath}/addModelGroup": {
+    "/addModelGroup": {
       "post": {
         "summary": "添加模型组",
         "deprecated": false,
@@ -18938,18 +17000,7 @@
         "tags": [
           "后台/限制功能/组合模板"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -19000,7 +17051,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteModelGroup": {
+    "/deleteModelGroup": {
       "delete": {
         "summary": "删除模型组",
         "deprecated": false,
@@ -19008,18 +17059,7 @@
         "tags": [
           "后台/限制功能/组合模板"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -19059,7 +17099,7 @@
         ]
       }
     },
-    "/{adminPath}/updateModelGroup": {
+    "/updateModelGroup": {
       "put": {
         "summary": "修改模型组",
         "deprecated": false,
@@ -19067,18 +17107,7 @@
         "tags": [
           "后台/限制功能/组合模板"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -19133,7 +17162,7 @@
         ]
       }
     },
-    "/{adminPath}/getModelGroup": {
+    "/getModelGroup": {
       "get": {
         "summary": "查询模型组",
         "deprecated": false,
@@ -19142,16 +17171,6 @@
           "后台/限制功能/组合模板"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "modelGroupId",
             "in": "query",
@@ -19184,7 +17203,7 @@
         ]
       }
     },
-    "/{adminPath}/getModelGroupPage": {
+    "/getModelGroupPage": {
       "get": {
         "summary": "分页查询模型组",
         "deprecated": false,
@@ -19193,16 +17212,6 @@
           "后台/限制功能/组合模板"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -19245,7 +17254,7 @@
         ]
       }
     },
-    "/{adminPath}/addVncNode": {
+    "/addVncNode": {
       "post": {
         "summary": "增加vnc控制器节点",
         "deprecated": false,
@@ -19253,18 +17262,7 @@
         "tags": [
           "后台/VNC控制器管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -19361,7 +17359,7 @@
         ]
       }
     },
-    "/{adminPath}/deleteVncNode": {
+    "/deleteVncNode": {
       "delete": {
         "summary": "删除vnc控制器节点",
         "deprecated": false,
@@ -19370,16 +17368,6 @@
           "后台/VNC控制器管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "id",
             "in": "query",
@@ -19432,7 +17420,7 @@
         ]
       }
     },
-    "/{adminPath}/updateVncNode": {
+    "/updateVncNode": {
       "put": {
         "summary": "修改vnc控制器节点",
         "deprecated": false,
@@ -19440,18 +17428,7 @@
         "tags": [
           "后台/VNC控制器管理"
         ],
-        "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -19522,7 +17499,7 @@
         ]
       }
     },
-    "/{adminPath}/selectVncNodePage": {
+    "/selectVncNodePage": {
       "get": {
         "summary": "分页查询vnc控制器节点",
         "deprecated": false,
@@ -19531,16 +17508,6 @@
           "后台/VNC控制器管理"
         ],
         "parameters": [
-          {
-            "name": "adminPath",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "example": "admin",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "page",
             "in": "query",
@@ -30501,96 +28468,6 @@
                   "data": {
                     "pid": 27426
                   }
-                }
-              }
-            },
-            "headers": {}
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
-      }
-    },
-    "/nat/add": {
-      "post": {
-        "summary": "添加端口转发规则",
-        "deprecated": false,
-        "description": "添加端口转发规则",
-        "tags": [
-          "受控端"
-        ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "description": "",
-            "required": false,
-            "example": "83gec12d3ee99ssbb4328c53de7ca432a",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "source_port": {
-                    "type": "integer",
-                    "description": "宿主端口",
-                    "nullable": true
-                  },
-                  "destination_ip": {
-                    "type": "string",
-                    "description": "客户端ip",
-                    "nullable": true
-                  },
-                  "destination_port": {
-                    "type": "integer",
-                    "description": "客户端端口",
-                    "nullable": true
-                  },
-                  "protocol": {
-                    "type": "string",
-                    "enum": [
-                      "tcp",
-                      "udp"
-                    ],
-                    "description": "tcp或udp"
-                  },
-                  "vm": {
-                    "type": "string",
-                    "description": "虚拟机识别id"
-                  }
-                },
-                "required": [
-                  "vm"
-                ]
-              },
-              "example": {
-                "source_ip": "110.42.32.185",
-                "source_port": 80,
-                "destination_ip": "10.0.1.6",
-                "destination_port": 80,
-                "protocol": "tcp",
-                "vm": "121"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
                 }
               }
             },
